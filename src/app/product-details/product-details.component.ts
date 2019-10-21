@@ -14,11 +14,11 @@ export class ProductDetailsComponent implements OnInit {
     private route: ActivatedRoute,
     private cartService: CartService
   ) { }
-}
-  ngOnInit() {
-     this.route.paramMap.subscribe(params => {
-     this.product = products[+params.get('productId')];
-  });
-}
+
+  ngOnInit() { 
+      this.route.paramMap.subscribe(params => {
+      this.product = products[+params.get('productId')];
+    });
+  }
   
 }
